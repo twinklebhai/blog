@@ -10,6 +10,12 @@
             font-size:20px; 
         }
     </style>
+<script>
+function refresh()
+{
+location.reload();
+}
+</script>
 </head>
   
 <body>
@@ -37,9 +43,18 @@
 		<label for="title">Comment</label>
 		<input required type="text" name="comment"  id="title"  class="form-control">
 	</div>
-		<button type="submit" class="btn btn-primary"> Post</button>
-	</form>
+		<button type="submit" class="btn btn-primary" onclick="refresh()" > Post</button>
+</form>
+<!-- CODE FOR DISPLAY  -->	
+<div class="container">
+	<% article.comment.forEach(comments=> { %>
+		<div class="card mt-4">
+		 	 <div class="card-body">
+		  		  <h4 class="card-title"><%= comments  %><br/>
+		   	  </div> 
+	 			<% }) %>
 	
+</div>
 	
 
 	

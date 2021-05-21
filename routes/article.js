@@ -83,7 +83,8 @@ var data=await schema.findById(req.params.id);
 data.comment.push(req.body.comment);
 console.log(" data after commenting         ",data);
 var updateddata=await data.save();
-console.log(updateddata);
+res.render('pages/display',{article :data});
+
 
 }
 catch(e)
