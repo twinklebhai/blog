@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home Page</title>
+    <style type="text/css" media="screen">
+        body {
+            background-color: skyblue;
+            text-decoration-color: white;
+            font-size:5em; 
+        }
+    </style>
+</head>
+  
+<body>
+<div class="container">
+	<h1 class="mb-4"> Blog Articles <h1/>
+	<a href="/articles/new" class="btn btn-success"> New Article </a>
+	<a href="/" class="btn btn-success"> All  Article </a>
+	<% data.forEach(article => { %>
+		<div class="card mt-4">
+		 	 <div class="card-body">
+		  		  <h4 class="card-title"><%= article.title %><br/>
+		    		   <div class="card-text mb-2"><%=  article.content %></div>
+		 		    </div>
+			<div>
+			<a href="/articles/<%= article.id %>" class="btn btn-primary">Read More</a>
+			</div>
+		   	  </div> 
+	 			<% }) %>
+	
+		</div>
+</body>
+  
+</html>

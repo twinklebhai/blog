@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home Page</title>
+    <style type="text/css" media="screen">
+        body {
+            background-color: skyblue;
+            text-decoration-color: white;
+            font-size:20px; 
+        }
+    </style>
+</head>
+  
+<body>
+<a href="/" class="btn btn-success"> All  Article </a>
+<div class="container">
+	<h1 class="mb-4" ><%= article.title %> </h1>
+	<h4 class="mb-4" ><%= article.content %> </h4>
+	
+
+
+	<div>
+	    <form action="/articles/edit/<%=article.id %>?_method="PUT" method="get" class="d-inline" >
+		<button type="submit" class="btn btn-primary">Edit</button>
+		</form>
+
+
+	   <form action="/articles/<%=article.id %>?_method=DELETE" method="post" class="d-inline" >
+		<button type="submit" class="btn btn-danger">Delete</button>
+		</form>
+	</div>
+<br/>
+<br/>
+<form action="/articles/addcomments/<%= article.id %>?_method=PUT" method="post">
+	<div class="form-group">
+		<label for="title">Comment</label>
+		<input required type="text" name="comment"  id="title"  class="form-control">
+	</div>
+		<button type="submit" class="btn btn-primary"> Post</button>
+	</form>
+	
+	
+
+	
+
+
+</body>
+  
+</html>
