@@ -17,3 +17,9 @@ edit------------localhost:3000/article/edit/:id  (put)
 delete----------localhost:3000/article/delete  (post)
 post comment --localhost:3000/article/addcomments/:id  (post)
 all comments---localhost:3000/article/:id  (get)
+---------------
+nosql database is used 
+------------
+schema-->  { title:{type :String},
+             content : {type :String},
+             comments :{type : Array}  }
