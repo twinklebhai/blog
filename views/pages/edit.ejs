@@ -18,7 +18,7 @@
 <form action="/articles/<%= article.id %>?_method=PUT" method="post">
 	<div class="form-group">
 		<label for="title">Title</label>
-		<input required type="text" value=<%= article.title %>  name="title"  id="title"  class="form-control">
+		<textarea  name="title"  id="title"  class="form-control"><%= article.title %></textarea>
 	</div>
 	<div class="form-group">
 		<label for="description">Description</label>

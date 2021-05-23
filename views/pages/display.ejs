@@ -41,7 +41,7 @@ location.reload();
 <form action="/articles/addcomments/<%= article.id %>?_method=PUT" method="post">
 	<div class="form-group">
 		<label for="title">Comment</label>
-		<input required type="text" name="comment"  id="title"  class="form-control">
+		<input required type="text" placeholde="place comment" name="comment"  id="title"  class="form-control">
 	</div>
 		<button type="submit" class="btn btn-primary" onclick="refresh()" > Post</button>
 </form>
